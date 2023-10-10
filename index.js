@@ -4,17 +4,18 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { Triangle, Circle, Square } from './lib/shapes.js';
 
+
 async function main() {
     try {
         const inputUser = await inquirer.prompt([
             {
                 name: 'text',
-                message: 'Enter up to three characters:',
+                message: 'Enter up to three characters to include in the shape:',
                 type: 'input',
             },
             {
                 name: 'textColor',
-                message: 'Enter a color keyword (OR a hexadecimal number):',
+                message: 'Enter a color keyword (OR a hexadecimal number) for text:',
                 type: 'input',
             },
             {
@@ -25,7 +26,7 @@ async function main() {
             },
             {
                 name: 'shapesColor',
-                message: 'Enter a color keyword (OR a hexadecimal number):',
+                message: 'Enter a color keyword (OR a hexadecimal number) for shape background:',
                 type: 'input',
             },
         ]);
